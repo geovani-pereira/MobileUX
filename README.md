@@ -15,5 +15,7 @@ Icones iOS / Android: https://applypixels.com/
 
 Icones Android: http://romannurik.github.io/AndroidAssetStudio/index.html
 
+App Icon Maker: https://appiconmaker.co/
+
 Slides
 https://docs.google.com/presentation/d/17pVziuRJK-Gri2R6bM6N3E6m7fvsaZ-kjMLfcm3czZY/edit?usp=sharing
