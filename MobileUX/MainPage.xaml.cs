@@ -13,14 +13,33 @@ namespace MobileUX
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
+        public String Email { get; set; }
+        public String Senha { get; set; }
+        public Command EntrarCommand { get; set; }
+
         public MainPage()
         {
+            BindingContext = this; // qual classe representa meu contexto para biding
+
+            //inicializacao de propriedades
+            Email = "Teste !";
+            EntrarCommand = new Command(Entrar);
+
             InitializeComponent();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        async void Entrar()
         {
-            Navigation.PushModalAsync(new Pagina2());
+      
+            var texto = Email + "\r\n" + Senha;
+
+            if (Email == "leandro@lanceloti.com.br" && Senha == "teste")
+            {
+                Application.Current.MainPage = new NavigationPage(new Pagina3());
+            } else
+            {
+                await DisplayAlert("Erro...", "Dados inválidos!", "Ok");
+            }
         }
     }
 }
